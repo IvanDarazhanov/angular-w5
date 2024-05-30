@@ -1,5 +1,5 @@
 <div *ngIf="data">
   <h2>Quote of the day from Breaking Bad</h2>
   <pre>{{ data | json  }}</pre>
-  <p>*Refresh the page for a new quote*</p>
+  <input type="button" (click)="refreshQuote()" value="Generate new quote">
 </div>

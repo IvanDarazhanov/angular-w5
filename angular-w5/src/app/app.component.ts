@@ -19,8 +19,11 @@ export class AppComponent implements OnInit{
   constructor(private dataService: DataService){}
 
   ngOnInit(): void {
-    this.dataService.getData().subscribe(response=> {this.data=response;console.log(this.data)});
+    this.dataService.getData().subscribe(response=> {this.data=response;});
   }
   
+  refreshQuote(){
+    this.dataService.getData().subscribe(response=>{this.data=response;})
+  }
 }
 

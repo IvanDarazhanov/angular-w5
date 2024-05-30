@@ -10,6 +10,6 @@ export class DataService {
   constructor(private http:HttpClient) { }
 
   getData(): Observable<any>{
-    return this.http.get('https://api.gameofthronesquotes.xyz/v1/random');
+    return this.http.get('https://api.breakingbadquotes.xyz/v1/quotes');
   }
 }
