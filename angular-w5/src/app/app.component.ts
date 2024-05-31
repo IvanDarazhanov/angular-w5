@@ -15,7 +15,8 @@ import { provideHttpClient } from '@angular/common/http';
 })
 export class AppComponent implements OnInit{
   data:any;
-
+  numberOfQoutes=0;
+  
   constructor(private dataService: DataService){}
 
   ngOnInit(): void {
@@ -24,6 +25,10 @@ export class AppComponent implements OnInit{
   
   refreshQuote(){
     this.dataService.getData().subscribe(response=>{this.data=response;})
+  }
+
+  multipleQuotes(number){
+    this.dataService.getMultipleData(number).subscribe(response=>{this.data=response;})
   }
 }
 

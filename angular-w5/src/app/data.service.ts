@@ -12,4 +12,8 @@ export class DataService {
   getData(): Observable<any>{
     return this.http.get('https://api.breakingbadquotes.xyz/v1/quotes');
   }
+
+  getMultipleData(number): Observable<any>{
+    return this.http.get('https://api.breakingbadquotes.xyz/v1/quotes/'+number);
+  }
 }

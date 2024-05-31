@@ -1,5 +1,9 @@
 <div *ngIf="data">
   <h2>Quote of the day from Breaking Bad</h2>
   <pre>{{ data | json  }}</pre>
-  <input type="button" (click)="refreshQuote()" value="Generate new quote">
+  <input type="button" (click)="refreshQuote()" value="Generate a new quote">
+  <br>
+  <br>
+  <input [(ngModel)]="numberOfQoutes" type="number">
+  <input type="button" (click)="multipleQuotes(numberOfQoutes)" value="Generate multiple quotes">
 </div>
